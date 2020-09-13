@@ -1,0 +1,12 @@
+Push without user and password everytime:
+
+$ git config credential.helper store
+$ git push https://github.com/owner/repo.git
+
+Username for 'https://github.com': <USERNAME>
+Password for 'https://USERNAME@github.com': <PASSWORD>
+
+##########################################################
+
+Token:
+6ad50d5252f3d093ef28820ba2be42c78636b8a1
