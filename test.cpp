@@ -41,28 +41,32 @@ void dna(string file) {
 
 } // dna
 
+void le(string file) {
+	vector<string> v;
+	ifstream input(file);
+	string in;
 
+	if(input.is_open()) {
+		while(getline(input, in)) {
+			if(input.good()) 
+				v.push_back(in);
+		} // while
+	} // if
 
-int main(int argc, char **argv) {
-	// if(argc != 3)
-	// 	cout << "Entrada inválida\n";
-	// else {
+	for(auto a : v) cout << a << endl;
+}
 
-	// 	string str1 = argv[1];
-	// 	string str2 = argv[2];
+int main() {
+	string file = "data.txt";
+	ifstream input(file);
+	string in;
+	
+	if(input.is_open())
+		getline(input, in);
 
-	// 	if(str1 == "inteiros") inteiros(str2);
-	// 	else if(str1 == "frases") frases(str2);
-	// 	else if(str1 == "dna") dna(str2);
-	// } // else
+	// cout << in << endl;
 
-	vector<string> v = {"aaa", "bbb", "ccc"};
-	// for(int i = 0; i < v.size(); i++) {
-	// 		v[i] = "ddd";
-	// } // for
+	le(file);
 
-	for(int i = 0; i < v.size(); i++) {
-		cout << v[i] << endl;
-	} // for
 }
 
